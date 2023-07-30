@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "appchat-web23a": {
+      "hosting": {
+        "appchat": [
+          "appchat-web23a"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "appchat-web23a"
+  }
+}

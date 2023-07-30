@@ -1,0 +1,18 @@
+<div id="chatboxparent">
+  <div id="listfriend">
+    <div id="info" style="height: 8.5rem">
+      <app-user [userin4]="userService.userin4 | async"></app-user>
+    </div>
+    <div id="friendListPannel">
+      <app-friendlist (selectedFriend)="selectFriend($event)"></app-friendlist>
+    </div>
+  </div>
+  <div id="chatbox">
+    <div id="chatcontrolheader" style="background-color: aquamarine">
+      <app-chat [_friendship]="friendship"></app-chat>
+    </div>
+    <div id="chatcontrolpanel" style="background-color: red; height: 5rem">
+      <app-chat-control [friendship]="friendship"></app-chat-control>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+<div class="profile">
+  <div class="avata">
+    <img class="avataimg" [src]="userin4?.imgUrl ?? ''" />
+  </div>
+  <div class="yourname">
+    <!-- <div id="id">{{ userin4?.id ?? "" }}</div> -->
+    <div id="name">{{ userin4?.name ?? "" }}</div>
+    <div id="email">{{ userin4?.email ?? "" }}</div>
+  </div>
+  <div class="action" style="width: 100%">
+    <form class="form" [formGroup]="emailForm">
+      <div class="form-group">
+        <input
+          type="text"
+          class="form-control"
+          id="email"
+          formControlName="email"
+          placeholder="Enter email"
+        />
+      </div>
+    </form>
+    <div
+      class="button"
+      style="display: flex; justify-content: center; align-items: center"
+    >
+      <button class="btn" (click)="userService.logout()">signout</button>
+      <button class="btn" (click)="addfriend(emailForm.value.email)">
+        addfriend
+      </button>
+    </div>
+  </div>
+</div>
