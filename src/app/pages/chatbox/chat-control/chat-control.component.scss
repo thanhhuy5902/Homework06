@@ -1,0 +1,13 @@
+.icon{
+    cursor: pointer;
+}
+.buttonsend{
+    border: none;
+    background: rgb(234, 238, 242);
+    background: linear-gradient(
+      90deg,
+      rgba(234, 238, 242, 1) 0%,
+      rgba(228, 231, 233, 1) 50%,
+      rgba(205, 213, 217, 1) 100%
+    );
+}

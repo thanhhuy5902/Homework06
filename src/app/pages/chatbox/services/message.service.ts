@@ -22,7 +22,7 @@ export class MessageService {
   listenMessages(conservationId: string) {
     let messageCollection = collection(
       this.firestore,
-      'message-' + conservationId
+      'messages-' + conservationId
     );
     let q = query(messageCollection, orderBy('timestamp'), limitToLast(100));
     onSnapshot(q, (snapshot) => {

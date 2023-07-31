@@ -1,0 +1,42 @@
+<div
+  *ngIf="friendship"
+  style="width: 100%; height: 100%; display: flex; flex-direction: column"
+>
+  <p class="name" style="border-bottom: 1px solid black">
+    {{ friendship.friendEmail }}
+  </p>
+  <span *ngFor="let message of messageService.messages | async">
+    <span
+      *ngIf="message.senderEmail == friendship.friendEmail"
+      style="display: flex; width: 100%"
+    >
+      <div class="borderfriendmsg" style="display: flex; margin: 10px">
+        <div class="frendmsg" style="">
+          {{ message.content }}
+        </div>
+      </div>
+    </span>
+    <span
+      *ngIf="message.senderEmail == myEmail"
+      style="text-align: right; width: 100%"
+    >
+      <div
+        class="bordermymsg"
+        style="
+          display: flex;
+          justify-content: flex-end;
+          margin: 10px;
+          align-items: center;
+        "
+      >
+        <div class="mymsg" style="">
+          {{ message.content }}
+        </div>
+      </div>
+    </span>
+  </span>
+</div>
+
+<div *ngIf="!friendship">
+  <h2>Thêm bạn mới hoặc chọn bạn từ danh sách</h2>
+</div>

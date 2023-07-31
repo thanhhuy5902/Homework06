@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Userin4Service } from '../services/userservice.service';
 import { Friendship } from 'src/models/friendship';
 import { MessageService } from '../services/message.service';
-import { user } from '@angular/fire/auth';
+
 @Component({
   selector: 'app-chat',
   templateUrl: './chat.component.html',
@@ -23,7 +23,7 @@ constructor(
   public messageService : MessageService
 ){
   this.userService.userin4.subscribe((user) =>{
-    this.myEmail = user?.email ?? ''
+    this.myEmail = user?.email ?? '';
     console.log(messageService.messages)
   })
 

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ChatboxComponent } from './chatbox/chatbox.component';
+import { ChatboxComponent } from './chat/chatbox.component';
 
 const routes: Routes = [
   {

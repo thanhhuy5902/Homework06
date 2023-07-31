@@ -1,0 +1,25 @@
+.frendmsg{
+    border: 1px solid black;
+            border-radius: 10px;
+            display: inline-block;
+            width: auto;
+            max-width: 500px;
+            word-wrap: break-word;
+            height: auto;
+            font-size: 15px;
+            padding: 5px;
+            background-color: #e4e6eb;
+}
+.mymsg{
+    border: 1px solid black;
+            border-radius: 10px;
+            width: auto;
+            height: auto;
+            font-size: 15px;
+            display: inline-block;
+            max-width: 500px;
+            padding: 5px;
+            color: white;
+            word-wrap: break-word;
+            background-color: rgb(0, 132, 255);
+}

@@ -1,9 +1,15 @@
-<div style="height: 100%; width: 100%">
+<div style="height: 95%; width: 100%">
   <div class="somebody" *ngFor="let friendship of friendList">
-    <p>
-      <button (click)="chatWith(friendship)">
-        {{ friendship.friendEmail }}
+    <div class="borderfrienlist" style="border-top: 1px solid black">
+      <button
+        class="friend"
+        (click)="chatWith(friendship)"
+        style="width: 385px"
+      >
+        <span class="text" style="font-weight: bold">{{
+          friendship.friendEmail
+        }}</span>
       </button>
-    </p>
+    </div>
   </div>
 </div>
